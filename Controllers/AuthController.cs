@@ -69,7 +69,7 @@ namespace QRCodeAuth.Controllers
 
             SessionData? session = _sessionRepository.GetSessionData(sessionId);
             if (session != null)
-                return $"{context.Request.Scheme}://{context.Request.Host}/ui/auth?nonce={randomInt}&authcode={session.AuthCode}&x={DateTime.UtcNow.Ticks}";
+                return $"{context.Request.Scheme}://{context.Request.Host}/ui/auth?nonce={randomInt}&authcode={session.AuthCode}&x={DateTime.UtcNow.Ticks.ToString("x")}";
             else
                 return string.Empty;
         }

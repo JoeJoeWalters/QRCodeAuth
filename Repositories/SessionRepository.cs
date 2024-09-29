@@ -1,4 +1,6 @@
-﻿namespace Service.Repositories
+﻿using System.Globalization;
+
+namespace Service.Repositories
 {
     public class SessionRepository : ISessionRepository
     {
@@ -43,7 +45,7 @@
             if (pieces.Length < 2)
                 return false;
 
-            long ticks = long.Parse(x);
+            long ticks = long.Parse(x, NumberStyles.HexNumber);
             DateTime generated = new DateTime(ticks);
             DateTime limit = DateTime.UtcNow.AddSeconds(-30);
             if (generated < limit)
