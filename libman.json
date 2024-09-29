@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "cdnjs",
+      "library": "bootstrap@5.3.3",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "require.js@2.3.7",
+      "destination": "wwwroot/lib/require.js/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "qrcode@1.5.1",
+      "destination": "wwwroot/lib/qrcode/"
+    }
+  ]
+}

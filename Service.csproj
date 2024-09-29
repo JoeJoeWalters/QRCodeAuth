@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.8" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\qrcode\bin\qrcode" />
+    <None Include="wwwroot\lib\qrcode\helper\to-sjis-browser.js" />
+    <None Include="wwwroot\lib\qrcode\helper\to-sjis.js" />
+    <None Include="wwwroot\lib\qrcode\lib\browser.js" />
+    <None Include="wwwroot\lib\qrcode\lib\can-promise.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\alignment-pattern.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\alphanumeric-data.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\bit-buffer.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\bit-matrix.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\byte-data.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\error-correction-code.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\error-correction-level.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\finder-pattern.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\format-info.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\galois-field.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\kanji-data.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\mask-pattern.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\mode.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\numeric-data.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\polynomial.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\qrcode.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\reed-solomon-encoder.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\regex.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\segments.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\utils.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\version-check.js" />
+    <None Include="wwwroot\lib\qrcode\lib\core\version.js" />
+    <None Include="wwwroot\lib\qrcode\lib\index.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\canvas.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\png.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\svg-tag.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\svg.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\terminal.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\terminal\terminal-small.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\terminal\terminal.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\utf8.js" />
+    <None Include="wwwroot\lib\qrcode\lib\renderer\utils.js" />
+    <None Include="wwwroot\lib\qrcode\lib\server.js" />
+    <None Include="wwwroot\lib\qrcode\license" />
+    <None Include="wwwroot\lib\qrcode\readme.md" />
+  </ItemGroup>
+
+</Project>

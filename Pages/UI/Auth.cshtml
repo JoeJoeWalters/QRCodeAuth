@@ -1,0 +1,19 @@
+﻿@page
+@model Service.Pages.UI.AuthModel
+@{
+}
+
+<html>
+<body>
+
+    @if (Model.Authorised)
+    {
+        <h1>Transaction Approved</h1>
+    }
+
+    @if (!Model.Authorised)
+    {
+        <h1>Transaction Not Approved</h1>
+        }
+</body>
+</html>
