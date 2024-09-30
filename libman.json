@@ -16,6 +16,11 @@
       "provider": "cdnjs",
       "library": "qrcode@1.5.1",
       "destination": "wwwroot/lib/qrcode/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "bootstrap@5.3.3",
+      "destination": "wwwroot/lib/bootstrap/"
     }
   ]
 }
