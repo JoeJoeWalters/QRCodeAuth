@@ -49,9 +49,12 @@ namespace Service.Repositories
             DateTime generated = new DateTime(ticks);
             DateTime limit = DateTime.UtcNow.AddSeconds(-30);
             if (generated < limit)
-                return false;
+                throw new SessionCodeExpiredException();
 
             _sessions.TryGetValue(pieces[0], out SessionData sessionData);
+            if (sessionData.Authorised)
+                throw new SessionAlreadyApprovedException();
+
             bool result = (sessionData != null && sessionData.OTP == pieces[1]);
             if (result)
             {

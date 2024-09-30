@@ -2,6 +2,16 @@
 
 namespace Service.Repositories
 {
+    public class SessionAlreadyApprovedException : Exception
+    {
+        public SessionAlreadyApprovedException() : base("Session already approved") { }
+    }
+
+    public class SessionCodeExpiredException : Exception
+    {
+        public SessionCodeExpiredException() : base("Session code expired") { }
+    }
+
     public static class SessionDataHelpers
     {
         public static string GenerateAuthCode(this SessionData? sessionData, string sessionId)
