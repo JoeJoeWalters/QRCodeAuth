@@ -44,7 +44,7 @@ namespace QRCodeAuth.Controllers
             if (uri != string.Empty)
             {
                 using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
-                using (QRCodeData qrCodeData = qrGenerator.CreateQrCode(uri, QRCodeGenerator.ECCLevel.Q))
+                using (QRCodeData qrCodeData = qrGenerator.CreateQrCode(uri, QRCodeGenerator.ECCLevel.L))
                 using (PngByteQRCode qrCode = new PngByteQRCode(qrCodeData))
                 {
                     byte[] qrCodeImage = qrCode.GetGraphic(20);
@@ -64,12 +64,9 @@ namespace QRCodeAuth.Controllers
 
         private String GenerateQRImageUri(HttpContext context, string sessionId)
         {
-            Random random = new Random();
-            var randomInt = random.Next();
-
             SessionData? session = _sessionRepository.GetSessionData(sessionId);
             if (session != null)
-                return $"{context.Request.Scheme}://{context.Request.Host}/ui/auth?nonce={randomInt}&authcode={session.AuthCode}&x={DateTime.UtcNow.Ticks.ToString("x")}";
+                return $"{context.Request.Scheme}://{context.Request.Host}/ui/auth?authcode={session.AuthCode}&x={DateTime.UtcNow.Ticks.ToString("x")}";
             else
                 return string.Empty;
         }
